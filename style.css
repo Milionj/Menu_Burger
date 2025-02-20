@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:wgh@500&display=swap');
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #1E2337;
+}
+
+main.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+main.content h1 {
+    color: #F92995;
+}
+
+main.content p {
+    color: #ddd;
+}
+
+/* Navbar Desktop */
+.navbar-desktop {
+    height: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    background-color: #F92995;
+}
+
+.navbar-desktop a {
+    padding: 3rem;
+    text-decoration: none;
+    color: #1E2337;
+    font-weight: bold;
+}
+
+/* Navbar Mobile */
+.navbar-mobile {
+    display: none;
+}
+
+#burger-icon {
+    position: fixed;
+    z-index: 9999;
+    top: 15px;
+    right: 20px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#burger-icon.active {
+    transform: rotate(90deg);
+}
+
+/* Modal Mobile cachée par défaut */
+#mobile-menu {
+    background-color: #F92995;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+    transition: top 0.5s ease-in-out;
+    z-index: 9998;
+}
+
+#mobile-menu.active {
+    top: 0;
+}
+
+.navbar-mobile-list {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-mobile-list a {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #1E2337;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+    .navbar-desktop {
+        display: none;
+    }
+    .navbar-mobile {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .navbar-mobile {
+        display: none;
+    }
+}
